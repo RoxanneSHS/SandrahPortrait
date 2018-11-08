@@ -1,0 +1,22 @@
+BACKUP ~SandrahNPC/backup3~
+AUTHOR ~Roxanne~
+
+VERSION ~v2.05~
+
+AUTO_TRA ~SandrahNPC/TRA/%s~
+
+LANGUAGE ~English~ ~english~ ~SandrahNPC/TRA/setup-Sandr.tra~
+
+BEGIN~Sandrah Alternative Portrait~
+DESIGNATED 10
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~CVSandr.dlg~ THEN BEGIN
+  FAIL  ~Requires Sandrah NPC mod~
+END
+COPY ~SandrahPort/Sandrah~ ~override~
+
+BEGIN~Jen'lig Alternative Portrait~
+DESIGNATED 20
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~CVSandr.dlg~ THEN BEGIN
+  FAIL  ~Requires Sandrah NPC mod~
+END
+COPY ~SandrahPort/Jenlig~ ~override~
