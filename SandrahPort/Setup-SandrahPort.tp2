@@ -1,7 +1,7 @@
 BACKUP ~SandrahNPC/backup3~
 AUTHOR ~Roxanne~
 
-VERSION ~v2.05~
+VERSION ~v2.06~
 
 AUTO_TRA ~SandrahNPC/TRA/%s~
 
@@ -13,6 +13,13 @@ ACTION_IF NOT FILE_EXISTS_IN_GAME ~CVSandr.dlg~ THEN BEGIN
   FAIL  ~Requires Sandrah NPC mod~
 END
 COPY ~SandrahPort/Sandrah~ ~override~
+
+BEGIN~Mikael Leger Sandrah Portrait~
+DESIGNATED 11
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~CVSandr.dlg~ THEN BEGIN
+  FAIL  ~Requires Sandrah NPC mod~
+END
+COPY ~SandrahPort/Sandrah2~ ~override~
 
 BEGIN~Jen'lig Alternative Portrait~
 DESIGNATED 20
