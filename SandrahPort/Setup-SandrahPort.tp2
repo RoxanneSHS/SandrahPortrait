@@ -28,8 +28,11 @@ ACTION_IF NOT FILE_EXISTS_IN_GAME ~CVSandr.dlg~ THEN BEGIN
 END
 COPY ~SandrahPort/Jenlig~ ~override~
 
-BEGIN
-~Make Sandrah a Cleric Ranger~
+BEGIN ~Make Sandrah a Cleric Ranger~
+DESIGNATED 30
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~CVSandr.dlg~ THEN BEGIN
+  FAIL  ~Requires Sandrah NPC mod~
+END
 
 COPY_EXISTING ~Sandrah.cre~ ~override~
 WRITE_BYTE 0x273 18
